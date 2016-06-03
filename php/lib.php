@@ -9,6 +9,7 @@ function connect() {
     		echo "MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 		return null;
 	} 
+        $mysqli->query("SET NAMES UTF8" );
 	//echo $mysqli->host_info . "<br>\n";
 	return $mysqli;
 }
