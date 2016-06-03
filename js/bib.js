@@ -1,6 +1,6 @@
 
-var alles = new Array();
-var colored = new Array();
+var alles = new Object();
+var colored = new Object();
 
 function summe( el, bahn, schlaege ) {
   var par = el.parentElement;
