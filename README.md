@@ -1,1 +1,1 @@
-# minigolf
+# Minigolf Score Verwaltung
