@@ -18,7 +18,7 @@ function getUsers() {
 	if( ! isset( $mysqli ) ) {
 		connect();
 	} 
-	$sql = "SELECT users.name AS name, clubs.name AS clubname FROM users JOIN clubs ON club_id=clubs.id";
+	$sql = "SELECT users.name AS name, clubs.name AS clubname,  users.id AS id FROM users JOIN clubs ON club_id=clubs.id";
 	return  $mysqli->query($sql);
 
 }
@@ -37,6 +37,7 @@ function getById( $table, $id) {
 		connect();
 	} 
 	$sql = "SELECT * FROM $table WHERE id=$id";
+	//echo $sql . "<br>\n";
 	$result = $mysqli->query($sql);
 	return $result->fetch_assoc();
 }
